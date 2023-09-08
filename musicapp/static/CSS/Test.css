@@ -1,0 +1,476 @@
+/* COMMON IN ALL PAGES  rgb(155, 177, 182)  rgb(37, 39, 39)*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background: rgb(155, 177, 182);
+}
+
+/* NAVIGATION BAR */
+
+#navbar{  
+    position: fixed;
+    height: 4rem;
+    width: 100%;
+    top: 0;
+    background: rgb(11, 155, 160);
+    z-index: 5;
+    border-bottom: rgb(5, 51, 65) solid 2px;
+    box-shadow: rgb(5, 51, 65) 0px 3px 5px;
+}
+
+#navbarul li{
+    display: inline-block;
+    line-height: 3.3rem;
+    margin: 0 40px; 
+}
+
+.logohead{
+    color: rgb(21, 60, 73);
+    font-size: 2rem;
+}
+
+
+
+#navbarul input{
+    position: relative;
+    height: 37px;
+    width: 570px;
+    left: 170px;
+    border-radius: 50px;
+    border: none;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 600;
+    border: white 4px solid;
+    color: rgb(18, 102, 128);
+}
+
+input::placeholder{
+    color: rgb(70, 181, 214);
+    font-weight: 500px;
+}
+
+#navbarul li button{
+    position: relative;
+    background: none;
+    cursor: pointer;
+    left:40px;
+    height: 35px;
+    border-radius: 50px;
+    border: none;
+    color: rgb(70, 181, 214);
+    font-size: 20px;
+    background-color: rgb(18, 102, 128);
+    height: 38px;
+    width: 50px;
+}
+
+#navbarul li button:hover{
+    color: white;
+}
+
+
+
+
+/* CAMERA */
+
+.camera{
+    position: relative;
+    float: right;
+    background: rgb(18, 102, 128);
+    border: 2px solid rgb(5, 51, 65);
+    box-shadow: rgb(5, 51, 65) 0px 2px 15px,rgb(5, 51, 65) -2px 0px 15px;
+    padding: 150px 150px;
+    z-index: 4;
+    top: -300px;
+    left: 150px;
+
+    margin: 30px 0 20px 20px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+div.camera a{
+    position: relative;
+    border-radius: 50px;
+    color: rgb(70, 181, 214);
+    font-size: 5rem;
+    top: 85px;
+    left: -45px;
+    text-shadow: rgb(37, 34, 34) 5px 5px 5px;
+}
+
+
+div.camera a:hover{
+    font-size: 5.5rem;
+}
+
+/* OPTION HAMBURGER */
+
+#menubar01{
+    position: fixed;
+    top: 50px;
+    left: 170px;
+    z-index: 5;
+}
+
+#menubarbg01{
+    position: fixed;
+    padding: 100px 100px;
+    background:rgb(67, 149, 173);
+    border: 2px solid rgb(5, 51, 65);
+    border-radius:50%;
+    top: -45px;
+    left: -100px;
+    z-index: -2;
+}
+
+#menu01{
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    margin: 30px 0 20px 20px;
+}
+
+#menu01:hover .bar01{
+    background-color: rgb(255, 255, 255);  
+}
+
+.bar01{
+    height: 5px;
+    width: 100%;
+    background-color: rgb(5, 51, 65);
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+#bar001{
+    transform: translateY(4px) rotateZ(-45deg);
+}
+
+#bar003{
+    transform: translateY(-6px) rotateZ(45deg);
+}
+
+#bar002{
+    opacity: 0;
+}
+
+/* ANimation bar 01 HAMBURGER */
+.change01 #bar001{
+    transform: translateY(-4px);
+}
+
+.change01 #bar003{
+    transform: translateY(4px);
+}
+
+.change01 #bar002{
+    opacity: 1;
+}
+
+.change01 #menubar01{
+    transform: translateX(-170px);
+}
+/* OPTION  */
+
+.option{
+    position: fixed;
+    height: 100%;
+    top: 60px;
+    width: 15rem;
+    background: rgb(67, 149, 173);
+    border-right: 2px solid rgb(5, 51, 65);
+    box-shadow: rgb(5, 51, 65) 2px 0px 5px;
+    transition: 0.3s; 
+    z-index: 3;
+}
+
+.change01 #option01{
+    transform: translateX(-250px);
+}
+
+div.option li{
+    padding: 15px 25px;
+    color: rgb(0, 23, 31);
+    transition: 0.1s;
+}
+
+div.option li:hover{
+    background-color: rgb(5, 51, 65);
+}
+
+div.option a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(70, 181, 214);
+}
+
+div.option li:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: white;
+}
+
+
+div.option ul li.active, div.option ul li.active a{
+    color: rgb(255, 255, 255);
+    background-color: rgb(5, 51, 65);
+    
+ }
+ 
+ div.option ul li.line, div.option ul li.active{
+     border-bottom: 2px solid white;
+ }
+
+
+/* MUSIC PLAY BAR BOTTOM */
+/* Something stuff */
+.playbar
+{
+    position: fixed;
+    top: 553px;
+    left: 235px;
+    width: 1125px;
+    height: 85px;
+    display:flex;
+    background: rgb(67, 149, 173);   
+    z-index: 0;
+    border-top: 1.5px solid rgb(5, 51, 65);
+}
+
+.playbarimage img
+{
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10px;   
+    
+}
+
+.palybarname
+{
+    width: 200px;
+    height: 80px;
+    margin-left: 10px;
+}
+
+.playbarname h5
+{
+    margin-top: 25px;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    line-height: 6px;
+   
+}
+
+.playbar p
+{
+    position: relative;
+    top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10px;
+    letter-spacing: 0.5px;
+    color: rgb(49, 44, 44);
+    
+}
+
+.playbarcontrols
+{
+    width: 650px;
+    height: 80px;
+    margin-left: 5px;  
+}
+
+/* PLAYER */
+
+/* SEEKBAR */
+#seek-bar{
+    position: absolute;
+    left: 300px;
+    top: 5px;
+    width: 600px;
+    height: 5px;
+    background-color: rgb(235, 225, 225);
+    display: flex;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 25px;    
+}
+
+#fill{
+    width: 200px;
+    height: 5px;
+    background-color: rgb(5, 51, 65);
+    border-radius: 50px;
+}
+
+#handle{
+    width: 8px;
+    height: 8px;
+    background-color: rgb(5, 51, 65);
+    border-radius: 50%;
+    margin-left: -5px;
+    transform: scale(1.5); 
+}
+
+#timebar h3{
+    position: fixed;
+    left: 1180px;
+    top: 555px;
+    z-index: 1;
+}
+
+/* BUTTONS */
+#buttons{
+    position: fixed;
+    height: 50px;
+    width: 650px;
+    top: 600px;
+    left: 62%;
+    transform: translate(-50%,-50%);
+    z-index: 0;
+}
+
+
+
+#play, #next, #prev, #shuff, #loop, #favbar, #vol{
+    position: absolute;
+    width: 45px;
+    height:45px;
+    border: 0;
+    background-color: rgb(5, 51, 65);
+    border-radius: 50%;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    top: 20px;
+    left: 40%;
+    transform: translate(-50%,-50%);
+}
+
+#play:hover, #next:hover, #prev:hover, #shuff:hover, #loop:hover {
+    box-shadow: 0px 0px 0px 1px rgb(226, 43, 165);
+    /* border: blueviolet 2px solid; */
+    animation: anim-shadow .2s forwards;
+}
+
+@keyframes anim-shadow{
+    100%{
+        box-shadow: 0px 0px 50px 20px rgb(98, 43, 226);
+    }
+}
+
+#next{
+    width: 30px;
+    height: 30px;
+    left: 48%;
+}
+
+#prev{
+    width: 30px;
+    height: 30px;
+    left: 32%;
+}
+
+#shuff{
+    width: 30px;
+    height: 30px;
+    left: 25%;
+}
+
+#loop{
+    width: 30px;
+    height: 30px;
+    left: 55%;
+}
+
+
+#favbar{
+    width: 40px;
+    height: 40px;
+    left: 87%;
+    font-size: 15px;
+}
+
+#favbar:hover{
+    color: red;
+    animation: anim-shadow01 .2s forwards;
+}
+
+@keyframes anim-shadow01{
+    100%{
+        box-shadow: 0px 0px 50px 20px rgb(231, 12, 78);
+    }
+}
+
+#vol{
+    width: 40px;
+    height: 40px;
+    left: 95%;
+    font-size: 15px;
+}
+
+#vol:hover{
+    color: rgb(143, 127, 127);
+    animation: anim-shadow02 .2s forwards;
+}
+
+@keyframes anim-shadow02{
+    100%{
+        box-shadow: 0px 0px 50px 20px rgb(141, 137, 139);
+    }
+}
+
+#seek-barvol{
+    position: absolute;
+    left: 910px;
+    top: 40px;
+    width: 100px;
+    height: 5px;
+    background-color: rgb(216, 216, 216);
+    display: flex;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+#fillvol{
+    width: 25px;
+    height: 5px;
+    background-color: rgb(5, 51, 65);
+    border-radius: 50px;
+}
+
+#handlevol{
+    width: 8px;
+    height: 8px;
+    background-color: rgb(5, 51, 65);
+    border-radius: 50%;
+    margin-left: -5px;
+    transform: scale(1.5); 
+}
+
+#fullpagebtn h2{
+    position: relative;
+    left: 870px;
+    top: 20px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+#fullpagebtn h2:hover{
+    color: rgb(92, 88, 88);
+}

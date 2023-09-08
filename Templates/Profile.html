@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music On Emotion</title>
+    <link rel="stylesheet" href="{% static 'CSS/Common.css' %} ">
+    <link rel="stylesheet" href="{% static 'CSS/Profile.css' %} ">
+    <script src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'JS/Common.js' %}"></script>
+</head>
+<body>
+    <!-- COMMON IN ALL PAGES -->
+    <nav id="navbar">
+        <ul id="navbarul">
+             <li><h1 class="logohead"> <i class="fa fa-music" aria-hidden="true"></i> <span class="logoheadcol">Emusic</h1></li>
+                <li><form method="POST" action="search">
+                    {% csrf_token %}
+                    <li><input type="text" name="search" placeholder=" &emsp; Search Your Song...."></li>
+                <li><button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button></li></form></li>
+         </ul>
+         <!-- CAMERA -->
+         <div class="camera">
+             <a href="#"><i class="fa fa-camera" aria-hidden="true"></i></a>
+         </div>
+    </nav>
+
+ <!-- OPTION SLIDEBAR -->
+    <div id="opt01">
+        <!-- 01 HAMBURGER -->
+        <div id="menubar01">
+            <div id="menu01" onclick="onClickMenu01()">
+                <span id="bar001" class="bar01"></span>
+                <span id="bar002" class="bar01"></span>
+                <span id="bar003" class="bar01"></span>
+            </div>
+        </div>
+        <div id="menubarbg01"></div>
+        
+        <div class="option" id="option01">
+            <ul>
+                <a href="/"> <li class="line"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;Home</li></a>
+                <a href="Profile"><li class="active"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Profile</li></a>
+                <a href="RecentlyPlayed"><li><i class="fa fa-undo" aria-hidden="true"></i>&nbsp;&nbsp;Recently Played</li></a>
+                <a href="Playlist"><li><i class="fa fa-list" aria-hidden="true"></i>&nbsp;&nbsp;Playlists</li></a>
+                <a href="Favourite"><li class="line"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;&nbsp;Favourite</li></a>
+                <a href="#"><li class="line"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;&nbsp;Setting</li></a>
+                <a href="#"><li><i class="fa fa-comment" aria-hidden="true"></i>&nbsp;&nbsp;Feedback</li></a>
+                <a href="#"><li><i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;About Us</li></a>
+                <a href="#"><li class="line"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Policy & Privacy</li></a>
+                <br>
+                <h4>&emsp;Copyright @ </h4>
+            </ul>
+        </div>
+    </div>
+
+    <!-- PROFILE PAGE WORK -->
+    <div class="profile_container">
+        <div class="profile_img">
+            <img src="{% static 'IMAGES/Anime.jpg' %}" alt="">
+            <button>Edit</button>
+        </div>
+        
+        <div class="info">
+            <h2>Name</h2>
+            <input type="text" id="name" value="Abc Xyz">&emsp;&emsp;<button onclick="editName()">Edit</button>
+        </div>
+
+        <div class="info01">
+            <h2>Email</h2>
+            <input type="email" id="email" value="sample@gmail.com">&emsp;&emsp;<button onclick="editEmail()">Edit</button><br><br><br>
+            <h2>Mobile No.</h2>
+            <input type="number" id="mobno" value="9999999999">&emsp;&emsp;<button onclick="editMobno()">Edit</button><br><br><br>
+            <h2>BirthDate</h2>
+            <input type="date" id="bday" value="">&emsp;&emsp; <button onclick="edidBday()">Edit</button><br><br><br>
+            <h2>Gender</h2>
+            <select name="cars" id="cars">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>&emsp;&emsp;<button onclick="edidBday()">Edit</button> 
+            <br><br><br><br><br><br><br><br>
+        </div>
+        
+        <div>
+            <input type="submit" value="Save Changes" class="savechanges">
+        </div>
+        
+    </div>
+    
+    <script>
+        function editName(){
+            document.getElementById("name").value="Dusty_Bun404";
+        }
+        function editEmail(){
+            document.getElementById("email").value="dustybun404@gamil.com";
+        }
+
+        function editMobno(){
+            document.getElementById("mobno").value="0000000000";
+        }
+
+        function editEmail(){
+            document.getElementById("email").value="dustybun404@gamil.com";
+        }  
+    </script>
+
+
+   
+</body>
+</html>

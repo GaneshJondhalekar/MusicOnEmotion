@@ -1,0 +1,79 @@
+.deladdbtn{
+    position: absolute;
+    top: 100px;
+    left: 300px;
+}
+
+.deladdbtn button{
+    width: 800px;
+    height: 30px;
+    border: 2px solid orangered;
+    background: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+.deladdbtn button:hover{
+    background-color: orangered;
+    border: 2px solid rgb(68, 6, 2);
+    color: rgb(68, 6, 2);
+}
+
+h2{
+    color: rgb(190, 187, 179);
+    font-size: 15px;
+}
+
+/* Playlist Box */
+.plbox{
+    position: absolute;
+    top: 250px;
+    left: 240px;
+    width: 1100px;
+    height: 543px;
+    overflow-x: hidden;
+    overflow: scroll;
+}
+
+
+.plbox::-webkit-scrollbar
+{
+    width: 0px;
+    background: transparent;
+}
+
+.plinfo{
+    width: 1100px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 10px;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.plinfo:hover
+{
+    background-color: rgb(255, 116, 2);
+}
+
+.plimg img{
+    width: 50px;
+    height: 50px;
+    margin: 2px 5px;
+    padding: 1px;
+    border-radius: 8px;
+}
+
+.plname h2{
+    position: relative;
+    left: 15px;
+    top: -2px;
+    margin-top: 7px;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    line-height: 15px;
+    color: rgb(255, 255, 255);
+}

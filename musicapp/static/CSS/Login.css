@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    text-decoration: none;
+}
+
+body{
+    overflow: visible;
+}
+
+/* COMMON STUFF */
+input{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    background: rgb(236, 194, 154);
+    border-left: 5px solid rgb(218, 186, 157);
+    color: rgb(78, 6, 6);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+
+input::placeholder{
+    color: rgb(85, 8, 18);
+    font-weight: bold;
+}
+
+.iconi, .icons{
+    position: relative;
+    background: rgb(236, 194, 154);
+    border-radius: 50%;
+    color: rgb(73, 73, 73);
+    width: 40px;
+    height: 40px;
+    text-align:center;
+    top: 15px;    
+}
+
+.iconi i,.icons i{
+    position: relative;
+    top: 10px;
+}
+
+input.btn{
+    width: 90px;
+    height: 35px;
+    font-size: 18px;
+    background: rgb(85, 9, 9);
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input.btn:hover{
+    background: rgb(141, 15, 15);
+}
+/* bg stuff */
+h2{
+    color: rgb(85, 9, 9);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+p{
+    color: white;
+    font-size: 18px;
+}
+
+button{
+    width: 90px;
+    height: 35px;
+    font-size: 18px;
+    background: rgb(85, 9, 9);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover{
+    background: rgb(141, 15, 15);
+}
+
+/* LOG IN STUFF */
+
+#login h2{
+    color: rgb(85, 9, 9);
+    font-weight: bold;
+    font-family: cursive;  
+}
+
+#loginbg{
+    /* display: none; */
+    position: fixed;
+    background: linear-gradient(-45deg, rgb(255, 0, 0) , rgb(255, 166, 0));
+    width: 600px;
+    height: 625px;
+    left: 0px;
+    transition: 0.5s;
+}
+
+#login{
+    /* display: none; */
+    position: fixed;
+    top: 180px;
+    left: 900px;
+    width: 400px;
+    z-index: 5;
+    transition: 0.5s;
+}
+
+#loginbg img{
+    position: absolute;
+    width: 600px;
+    height: 560px;
+    left: 220px;
+    top: 60px;
+}
+
+
+
+#login input{
+    position: relative;
+    left: 50px;
+    top: -20px;
+}
+
+
+
+.forgotpassbtn{
+    position: relative;
+    width: 200px;
+    height: 35px;
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: rgb(88, 80, 80);
+    cursor: pointer;
+    border-radius: 15px;
+    left: 180px;
+}
+
+.forgotpassbtn:hover{
+    color: rgb(129, 126, 126);
+    background: none;
+}
+
+.btni{
+    position: relative;
+    left: 100px;
+}
+
+/* login bg content */
+#loginbg h2{
+    position: relative;
+    left: 100px;
+    top: 30px;
+}
+
+#loginbg p{
+    position: relative;
+    top: 50px;
+    left: 10px;
+    /* border: 1px solid blue; */
+    width: 450px;
+    height: 50px;
+}
+
+
+#loginbg button{
+    position: relative;
+    top: 90px;
+    left: 120px;
+}
+
+/* FORGOT PASS STUFF */
+#forgotpass{
+    position: fixed;
+    top: 80px;
+    left: 1400px;
+    background: white;
+    width: 500px;
+    height: 500px;
+    z-index: 6;
+    transition: 0.3s;
+}
+
+.close{
+    position: relative;
+    background: rgb(85, 9, 9);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    left: 450px;
+    top: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.close i{
+    position: relative;
+    color: rgb(255, 255, 255);
+    top: 10px;
+}
+
+ .close:hover i{
+    color: rgb(170, 169, 169);
+}
+
+#forgotpass h2{
+    position: relative;
+    font-size: 18px;
+    top: 20px;
+    left: 10px;
+}
+
+#forgotpass .iconi{
+    position: relative;
+    left: 20px;
+    top: 50px;
+}
+
+#forgotpass input{
+    position: relative;
+    top: 15px;
+    left: 70px;
+}
+
+#forgotpass .recoverybtn input{
+    position: relative;
+    left: 150px;
+}
+
+/* SIGN UP STUFF */
+
+#signin h2{
+    color: rgb(85, 9, 9);
+    font-weight: bold;
+    font-family: cursive;  
+}
+
+#signinbg{
+    /* display: none; */
+    position: fixed;
+    background: linear-gradient(45deg, rgb(255, 0, 0) , rgb(255, 166, 0));
+    width: 600px;
+    height: 625px;
+    left: 1500px;
+    top: 0px;
+    transition: 0.5s;
+}
+
+#signin{  
+    /* display: none; */
+    position: fixed;
+    top: 150px;
+    left: -400px;
+    width: 400px;
+    z-index: 5;
+    transition: 0.5s;
+}
+
+#signinbg img{
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    left: -125px;
+    top: 100px;
+}
+
+
+
+
+#signin input{
+    position: relative;
+    top: -20px;
+    left: 50px;
+}
+
+
+
+/* signup bg content */
+#signinbg h2{
+    position: relative;
+    left: 190px;
+    top: 30px;
+}
+
+#signinbg p{
+    position: relative;
+    top: 60px;
+    left: 160px;
+    /* border: 1px solid blue; */
+    width: 450px;
+    height: 50px;
+    width: 420px;
+}
+
+
+#signinbg button{
+    position: relative;
+    top: 90px;
+    left: 320px;
+}
+
+/* ON CLICK FUNCTION CHANGES */
+
+.window #forgotpass{
+    left:830px;
+}
+
+
+/* ON LOGIN TO SIGN UP */
+
+.logsign #loginbg{
+    /* display: none; */
+    left: -900px;
+}
+
+.logsign #login{
+    /* display: none; */
+    left: 1400px;
+}
+
+.logsign #signinbg{
+    left: 743px;
+}
+
+.logsign #signin{
+    left: 90px;
+}

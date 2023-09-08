@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music on Emotion</title>
+    <link rel="stylesheet" href="{% static 'CSS/Login.css' %}">
+    <script src=" https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script src="{% static 'JS/login.js'%}"></script>
+</head>
+
+<body>
+    <div id="loginbgcont">
+        <div id="loginbg">
+            <h2>New Here ?</h2>
+            <p>Are you new ? Dont wait, Sign Up for MUSIC ON EMOTION and Register your account for
+                FREE !!! Enjoy the music based on your emotion.</p>
+            <button onclick="login_signin()">Sign Up</button>
+            <img src="{% static 'IMAGES/music.svg'%}" alt="">
+        </div>
+    </div>
+
+   
+
+    <!-- FORGOT PASSWORD STUFF -->
+    <div id="forgotpasscont">
+        <div id="forgotpass">
+            <form action="">
+                <div class="close" onclick="forgotPassWindow()"><i class="fa fa-times" aria-hidden="true"></i></div>
+                <h2>Enter your recovery Email below, we will send you new password....
+                    <br> After submitting please check your Email.... </h2>
+                <div class="inputfield">
+                    <div class="iconi"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                    <input type="email" placeholder="  Email" required>
+                </div><br>
+
+                <div class="recoverybtn"><input type="submit" value="Submit" class="btn"></div>
+            </form>
+        </div>
+    </div>
+
+    <div id="signinbgcont">
+        <div id="signinbg">
+            <h2>Already Member ?</h2>
+            <p>Login using your registered email and enjoy the FREE music based on your emotion.</p>
+            <button onclick="login_signin()">Log in</button>
+            <img src="{% static 'IMAGES/music1.svg'%}" alt="">
+        </div>
+    </div>
+
+    
+
+    </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music On Emotion</title>
+    <link rel="stylesheet" href="{% static 'CSS/Common.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/Favourite.css' %}">
+
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- COMMON IN ALL PAGES -->
+    <nav id="navbar">
+        <ul id="navbarul">
+            <li>
+                <h1 class="logohead"> <i class="fa fa-music" aria-hidden="true"></i> <span class="logoheadcol">Emusic
+                </h1>
+            </li>
+            <li><input type="text" name="search" placeholder=" &emsp; Search Your Song...."></li>
+            <li><button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button></li>
+        </ul>
+        <!-- CAMERA -->
+        <div class="camera" onclick="campop()">
+            <a href="Capture"><i class="fa fa-camera" aria-hidden="true"></i></a>
+        </div>
+    </nav>
+
+    <!-- OPTION SLIDEBAR -->
+    <div id="opt01">
+        <!-- 01 HAMBURGER -->
+        <div id="menubar01">
+            <div id="menu01" onclick="onClickMenu01()">
+                <span id="bar001" class="bar01"></span>
+                <span id="bar002" class="bar01"></span>
+                <span id="bar003" class="bar01"></span>
+            </div>
+        </div>
+        <div id="menubarbg01"></div>
+
+        <div class="option" id="option01">
+            <ul>
+                <a href="Home">
+                    <li class="line"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;Home</li>
+                </a>
+                <a href="Profile">
+                    <li><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Profile</li>
+                </a>
+                <a href="RecentlyPlayed">
+                    <li><i class="fa fa-undo" aria-hidden="true"></i>&nbsp;&nbsp;Recently Played</li>
+                </a>
+                <a href="Playlist">
+                    <li><i class="fa fa-list" aria-hidden="true"></i>&nbsp;&nbsp;Playlists</li>
+                </a>
+                <a href="Favourite">
+                    <li class="active line"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;&nbsp;Favourite</li>
+                </a>
+                <a href="#">
+                    <li class="line"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;&nbsp;Setting</li>
+                </a>
+                <a href="#">
+                    <li><i class="fa fa-comment" aria-hidden="true"></i>&nbsp;&nbsp;Feedback</li>
+                </a>
+                <a href="#">
+                    <li><i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;About Us</li>
+                </a>
+                <a href="#">
+                    <li class="line"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Policy & Privacy</li>
+                </a>
+                <br>
+                <h4>&emsp;Copyright @ </h4>
+            </ul>
+        </div>
+    </div>
+
+   
+
+    <!-- FAVOURITE PAGE WORK PAGE WORK -->
+    <div class="fav-container">
+        <div class="fav-header">
+            <div class="favtitle">
+                <p>{{name}}</p>
+            </div>
+        </div>
+
+        <div class="fav-box">
+            {% for song in songs%}
+            <a href="{% url 'play' id=song.id %}">
+            <div class="fav-info">
+                <div class="fav-img">
+                    <img src="{{song.image.url}}">
+                </div>
+                <div class="fav-name">
+                    <h6>{{song.title}}</h6>
+                    <p>{{song.artist}}</p>
+                </div>
+            </div>
+            </a>
+            {% endfor %}
+            <hr>
+
+            
+            <br><br><br>
+        </div>
+    </div>
+
+    <!-- PLAYBAR BOTTOM OF PAGE -->
+    <div class="main">
+
+        <!--- left part --->
+        <div class="left">
+
+            <!--- song title & artist name --->
+            <div class="song_detail">
+                <p id="title">Song Name</p>
+                <p id="artist">Artist Name</p>
+            </div>
+
+            <!--- song img --->
+            <img id="track_image">
+            <div class="volume">
+                <p id="volume_show">90</p>
+                <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+                <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
+            </div>
+
+        </div>
+
+        <!--- right part --->
+        <div class="right">
+
+            <!--- song duration part --->
+            <div class="duration">
+                <button id="auto" onclick="autoplay_switch()">Auto &nbsp;<i class="fa fa-circle-o-notch"
+                        aria-hidden="true"></i></button>
+                <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+
+            </div>
+
+            <!--- middle part --->
+            <div class="middle">
+                <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward"
+                        aria-hidden="true"></i></button>
+                <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+                <button onclick="next_song()" id="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <script src="{% static 'JS/Common.js' %}"></script>
+</body>
+
+</html>

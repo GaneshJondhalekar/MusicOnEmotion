@@ -1,0 +1,35 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'CSS/playsong.css' %}">
+        <script src="https://kit.fontawesome.com/7d35781f0a.js" crossorigin="anonymous"></script> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    </head>
+    <main class="player">
+        <div class="header">
+            <a href="#" class="button">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+                <span class="sr-only">menu bar</span>
+            </a>
+            <p>Now Playing</p>
+            <a href="#" class="button">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <span class="sr-only">Search</span>
+            </a>
+        </div><!--  header  -->
+        <img src="{{obj.image.url}}" alt="album art" class="art"><!--  art  -->
+        <div class="info">
+            <h1>{{obj.title}}</h1>
+            <p>{{obj.artist}}</p>
+        </div><!--  info  -->
+        <div class="prog">
+            <audio controls><source src={{obj.audio_file.url}} type="audio/ogg"></audio>
+        </div>
+        <!--  progress  -->
+        
+        <div class="bar"></div><!--  bar  -->
+    </main>
+
+
+
+</html>

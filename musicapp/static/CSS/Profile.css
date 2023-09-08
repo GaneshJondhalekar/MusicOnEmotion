@@ -1,0 +1,89 @@
+/* PROFILE IMAGE IMAGE  & BUTTON */
+.profile_container{
+    overflow: scroll;
+}
+.profile_img {
+    position: absolute;
+    top: 80px;
+    left: 300px;
+}
+
+.profile_img img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid rgb(105, 72, 50);
+}
+
+.profile_img button{
+    position: relative;
+    left: -100px;
+    top: 25px;
+}
+
+/* INFO */
+.info{
+    position: absolute;
+    top: 130px;
+    left: 550px;
+}
+
+.info input{
+    border: none;
+    background: none;
+    border-bottom: orangered 2px solid;
+    width: 500px;
+    height: 30px;
+    font-size: 18px;
+    caret-color: orangered;
+    color: rgb(151, 107, 78);
+}
+h2{
+    color: rgb(190, 187, 179);
+    font-size: 15px;
+}
+
+
+.info01{
+    position: absolute;
+    top: 280px;
+    left: 320px;
+}
+
+.info01 input, .info01 select{
+    border: none;
+    background: none;
+    border-bottom: orangered 2px solid;
+    width: 900px;
+    height: 30px;
+    font-size: 18px;
+    caret-color: orangered;
+    color: rgb(151, 107, 78);
+}
+
+.profile_img button, .info01 button, .info button{
+    height: 20px;
+    width: 50px;
+    border: 1px solid rgb(138, 90, 0);
+    border-radius: 50px;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(255, 166, 0);
+}
+
+.savechanges{
+    position: absolute;
+    top: 635px;
+    left: 500px;
+    height: 20px;
+    width: 600px;
+    border: 1px solid rgb(238, 234, 232);
+    border-radius: 50px;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(192, 180, 176);
+}

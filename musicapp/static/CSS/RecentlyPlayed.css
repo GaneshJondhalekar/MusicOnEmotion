@@ -1,0 +1,243 @@
+
+.music-container
+{
+    width:1100px;
+    margin-left: 240px;
+    margin-top: 66px; 
+    display: block;
+    background-color:rgb(41, 41, 33);
+}
+.music-header
+{
+    width: 100%;
+    height: 67px;
+    border-bottom: 1px solid rgb(5, 5, 5);
+    color: rgb(255, 255, 255);
+    background-color: rgb(78, 0, 0);
+}
+
+.music-header .title
+{
+    position: relative;
+    top: 40px;
+    width: 250px;
+    height: 30px;
+    font-size: 25px;
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 40px;
+    padding-left: 10px;
+}
+
+.music-box
+{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow: scroll;
+}
+
+.music-box::-webkit-scrollbar
+{
+    width: 0px;
+    background: transparent;
+}
+
+.music-img
+{
+    width: 60px;
+    height: 60px; 
+}
+
+.music-info
+{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 10px;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.music-info:hover
+{
+    background-color: rgb(255, 116, 2);
+}
+
+.music-img img
+{
+    width: 50px;
+    height: 50px;
+    margin: 2px 5px;
+    padding: 1px;
+    border-radius: 8px;
+}
+
+.music-name
+{
+    width: 300px;
+    padding: 0 5px;
+    height: 50px;
+}
+
+.music-name h6
+{
+    margin-top: 7px;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    line-height: 15px;
+    color: rgb(255, 255, 255);
+}
+
+.music-name p
+{
+    position: relative;
+    top: 10px;
+    font-size: 10px;
+    line-height: 1px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    color: #867f7f;
+}
+
+hr
+{
+    display: none;
+    width: 100%;
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+    color: #000;
+    background-color: black;
+}
+
+
+.music-play
+{
+    width: 100%;
+    height: 100px;
+    display:flex;
+    background-color: rgb(146, 114, 114);
+    
+}
+
+.play-image img
+{
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+
+.song-name
+{
+    width: 200px;
+    height: 80px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.song-name h5
+{
+    margin-top: 25px;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    line-height: 6px;
+}
+
+.song-name p
+{
+    font-size: 10px;
+    margin-left: 10px;
+    letter-spacing: 0.5px;
+    color: #ccc;
+}
+
+.play-controls
+{
+    width: 600px;
+    height: 80px;
+    
+    margin-top: 10px;
+    margin-left: 120px;
+   
+    
+}
+
+
+.play-controls1
+{
+    width: 250px;
+    height: 80px;
+    
+    margin-top: 10px;
+    margin-left: 10px;
+   
+    
+}
+
+.play-icon1
+{
+    width: 180px;
+    height: 50px;
+    margin-left: 35px;
+    margin-top: 15px;
+   
+    
+    
+
+}
+
+.play-icon1 .fa-volume-up
+{
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 100%;
+    margin-top: 11px;
+    margin-left: 40px;
+    padding: 8px 9px;
+    cursor: pointer;
+}
+
+
+.play-icon
+{
+    width: 300px;
+    height: 50px;
+    margin-left: 150px;
+    margin-top: 15px;
+}
+
+.play-icon .fa
+{
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 100%;
+    margin-top: 11px;
+    margin-left: 22px;
+    padding: 8px 9px;
+    cursor: pointer;
+}
+
+.play-icon .fa-play
+{
+    background-color: #fff;
+}
+
+.play-icon .fa-play:hover
+{ 
+    height: 35px;
+    font-size: 20px;
+}
+
+
+

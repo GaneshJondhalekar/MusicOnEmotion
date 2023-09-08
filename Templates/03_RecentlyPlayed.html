@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music On Emotion</title>
+   
+    <link rel="stylesheet" href="{% static 'CSS/Common.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/RecentlyPlayed.css' %}">
+
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- COMMON IN ALL PAGES -->
+    <nav id="navbar">
+        <ul id="navbarul">
+            <li>
+                <h1 class="logohead"> <i class="fa fa-music" aria-hidden="true"></i> <span class="logoheadcol">Emusic
+                </h1>
+            </li>
+            <li><form method="POST" action="search">
+                {% csrf_token %}
+                <li><input type="text" name="search" placeholder=" &emsp; Search Your Song...."></li>
+            <li><button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button></li></form></li>
+        </ul>
+        <!-- CAMERA -->
+        <div class="camera">
+            <a href="Capture"><i class="fa fa-camera" aria-hidden="true"></i></a>
+        </div>
+    </nav>
+
+    <!-- OPTION SLIDEBAR -->
+    <div id="opt01">
+        <!-- 01 HAMBURGER -->
+        <div id="menubar01">
+            <div id="menu01" onclick="onClickMenu01()">
+                <span id="bar001" class="bar01"></span>
+                <span id="bar002" class="bar01"></span>
+                <span id="bar003" class="bar01"></span>
+            </div>
+        </div>
+        <div id="menubarbg01"></div>
+
+        <div class="option" id="option01">
+            <ul>
+                <a href="/">
+                    <li class="line"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;Home</li>
+                </a>
+                <a href="Profile">
+                    <li><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Profile</li>
+                </a>
+                <a href="RecentlyPlayed">
+                    <li class="active"><i class="fa fa-undo" aria-hidden="true"></i>&nbsp;&nbsp;Recently Played</li>
+                </a>
+                <a href="Playlist">
+                    <li><i class="fa fa-list" aria-hidden="true"></i>&nbsp;&nbsp;Playlists</li>
+                </a>
+                <a href="Favourite">
+                    <li class="line"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp;&nbsp;Favourite</li>
+                </a>
+                <a href="#">
+                    <li class="line"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;&nbsp;Setting</li>
+                </a>
+                <a href="#">
+                    <li><i class="fa fa-comment" aria-hidden="true"></i>&nbsp;&nbsp;Feedback</li>
+                </a>
+                <a href="#">
+                    <li><i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;About Us</li>
+                </a>
+                <a href="#">
+                    <li class="line"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Policy & Privacy</li>
+                </a>
+                <br>
+                <h4>&emsp;Copyright @ </h4>
+            </ul>
+        </div>
+    </div>
+
+    
+
+    <!-- RECENTLY PLAYED PAGE WORK PAGE WORK -->
+    <div class="music-container">
+        <div class="music-header">
+            <div class="title">
+                <p>Recently Played</p>
+            </div>
+        </div>
+
+        <div class="music-box">
+            {% for song in songs %}
+            <div class="music-info">
+                <div class="music-img">
+                    <img src="{{song.image.url}}">
+                </div>
+                <div class="music-name">
+                    <h6>{{song.title}}</h6>
+                    <p>{{song.artist}}</p>
+                </div>
+            </div>
+            
+            {% endfor %}
+            <hr>
+            <br><br><br>
+        </div>
+    </div>
+
+    <!-- PLAYBAR BOTTOM OF PAGE -->
+    
+
+   
+    <script src="{% static 'JS/Common.js' %}"></script>
+</body>
+
+</html>
