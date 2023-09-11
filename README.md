@@ -13,4 +13,6 @@ Steps to start Project
 7. Add this model file in project base direcrory where manage.py file is there.
 8. Run development server using
    python manage.py runserver
+
+Note: Some features are not implimented like setting ,profile,favorite.
    
